@@ -21,9 +21,6 @@ for lines in data:
     right = ((pos-1) // window + 1)*window
     if rbound > right and rbound - right < window:
         right = rbound
-    elif rbound < right:
-        left -= window
-        right = rbound
     key = chrom+':'+str(left)+'-'+str(right)
     if key not in COUNT:
         COUNT[key]=0
